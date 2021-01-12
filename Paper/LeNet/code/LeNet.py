@@ -13,8 +13,8 @@ class LeNet(nn.Module):
         self.conv1 = nn.Conv2d(in_channels=1, out_channels=6, kernel_size=(5, 5), stride=(1, 1), padding=(0, 0))
         self.conv2 = nn.Conv2d(in_channels=6, out_channels=16, kernel_size=(5, 5), stride=(1, 1), padding=(0, 0))
         self.conv3 = nn.Conv2d(in_channels=16, out_channels=120, kernel_size=(5, 5), stride=(1, 1), padding=(0, 0))
-        self.linear1 = nn.Linear(in_features=120, out_features=80)
-        self.linear2 = nn.Linear(in_features=80, out_features=10)
+        self.linear1 = nn.Linear(in_features=120, out_features=84)
+        self.linear2 = nn.Linear(in_features=84, out_features=10)
 
     def forward(self, x):
         x = self.relu(self.conv1(x))
